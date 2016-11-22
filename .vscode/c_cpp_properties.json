@@ -11,9 +11,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "/usr/include"
-                //,"/opt/ros/indigo/include"
-                //,"${ROS_PACKAGE_PATH}"
+                "/usr/include",
+                "/opt/ros/kinetic/include"
                 ],
             "browse" : {
                 "limitSymbolsToIncludedHeaders" : true,
