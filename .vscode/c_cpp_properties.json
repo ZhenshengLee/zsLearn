@@ -12,8 +12,6 @@
             "name": "Linux",
             "includePath": [
                 "/usr/include"
-                //,"/opt/ros/indigo/include"
-                //,"${ROS_PACKAGE_PATH}"
                 ],
             "browse" : {
                 "limitSymbolsToIncludedHeaders" : true,
