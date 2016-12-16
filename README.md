@@ -24,10 +24,10 @@ sudo gedit /usr/lib/cmake/dlib/dlib-none.cmake
 * 安装下列插件：
 
 ```shell
-cmake - Version :0.0.15
-cmake-tools - Version :0.8.6
-code-settings-sync - Version :2.3.8
-cpptools - Version :0.9.3
+cmake
+cmake-tools
+code-settings-sync
+cpptools
 ```
 
 ## 复制此目录，使用cmake编译使用示例程序
