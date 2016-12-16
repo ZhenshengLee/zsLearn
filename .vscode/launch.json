@@ -6,7 +6,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"targetArchitecture": "x64",
-			"program": "${workspaceRoot}/bin/hello_world",
+			"program": "${workspaceRoot}/build/matrix_ex",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceRoot}",
