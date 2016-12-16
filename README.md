@@ -30,4 +30,4 @@ code-settings-sync - Version :2.3.8
 cpptools - Version :0.9.3
 ```
 
-## 复制此目录，使用cmake变异示例程序
+## 复制此目录，使用cmake编译使用示例程序
