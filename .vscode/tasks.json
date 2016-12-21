@@ -5,7 +5,7 @@
     "args": [
         "-interaction=nonstopmode",
         "-file-line-error",
-        "beamersrc/gougub.tex"
+        "src/zsbeamer.tex"
     ],
     "showOutput": "silent",
     "problemMatcher": {
