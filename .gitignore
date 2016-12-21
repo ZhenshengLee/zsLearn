@@ -16,6 +16,10 @@ build/
 *.cb
 *.cb2
 
+*.nav
+*.pdf
+*.snm
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
