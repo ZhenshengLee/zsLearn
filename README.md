@@ -1,5 +1,9 @@
 # VSCode使用Latex
 
+## 参考
+
+>[CMakeUserUseLATEX](https://cmake.org/Wiki/CMakeUserUseLATEX )
+
 ## 安装
 
 ### windows
