@@ -2,6 +2,14 @@
 
 ## 安装
 
+### windows
+
+* 下载TexLive-2016.iso
+
+* install-tl-windows.bat
+
+### Ubuntu
+
 ```shell
 sudo apt-get install texlive-full latex-beamer
 ```
