@@ -3,6 +3,10 @@
 bin/
 build/
 
+*.nav
+*.snm
+*.mp4
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -16,8 +20,7 @@ build/
 *.cb
 *.cb2
 
-*.nav
-*.snm
+
 
 ## Intermediate documents:
 *.dvi
