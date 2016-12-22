@@ -1,13 +1,13 @@
+% 输出PDF时，需要把所有路径..替换成.
 \documentclass{beamer}
 \usepackage[UTF8,noindent]{ctex}
-\usepackage{media9}
 \usetheme{Berkeley}
 \usecolortheme{seagull}
 
 % 导言
 \title{组会汇报}
 \subtitle{移动机器人远程交互软件设计与实现}
-\institute{中南大学机电工程学院}
+\institute{C400}
 \author{黎振胜}
 \date{\today}
 \subject{中南大学研究生学位论文}
@@ -17,30 +17,112 @@
 % \logo{\includegraphics[width=1.54cm]{./resource/logo/csu.pdf}}
 
 \begin{document}
-% page-1
+
 \begin{frame}
 \maketitle
 \end{frame}
-% page-2
+%--- Next Frame ---%
 \begin{frame}[t]{汇报内容}
- \tableofcontents[pausesections]
+    \tableofcontents[pausesections]
 \end{frame}
-%--- page-3 ---%
-\begin{frame}[t]{1.背景和总体方案}{背景}
+%--- Next Frame ---%
+\begin{frame}[t]{1.1背景}
     \section{背景和总体方案}
-    \begin{env}
-        \includemedia[activate=onclick,width=0.5\textwidth]{\small{click to play}}{../resource/video/2.mp4}
-    \end{env}
-    
+    \subsection{背景}
+    \begin{itemize}
+        \item 移动机器人代替人去危险场合执行探测和救援任务的应用背景
+            \begin{itemize}
+                \item 远场控制；数据可视化；指令传输
+                \item 机器人具有一定自主性
+            \end{itemize}
+        \item 为机器人提供人机交互界面
+            \begin{itemize}
+                \item LabVIEW软件的优势，具有大量的内置控件
+            \end{itemize}
+        \item 设备，算法的快速集成
+            \begin{itemize}
+                \item 部署自然语言交互，决策，规划等算法
+                \item 快速连接手柄等设备
+            \end{itemize}
+    \end{itemize}
 \end{frame}
-%--- page-4 ---%
-\begin{frame}[t]{2.基于UML的远程交互平台软件设计和实现}
-    \section{基于UML的远程交互平台软件设计和实现}
-    阿富汗第三方撒
+%--- Next Frame ---%
+\begin{frame}[t]{1.2总体方案}
+    \subsection{总体方案}
 \end{frame}
-%--- page-5 ---%
+%--- Next Frame ---%
+\begin{frame}[t]{2.1使用LabVIEW Actor Framework进行程序设计}
+    \section{基于LabVIEW的远程交互平台软件设计和实现}
+    \subsection{LVAF}
+    \begin{itemize}
+        \item 是什么
+        \item 为什么
+        \item 理解LVAF
+    \end{itemize}
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{一个例子理解LVAF}
+    \begin{itemize}
+        \item 从循环到并发
+        \item 进程间通信
+        \item 消息和事件
+    \end{itemize}
+    配一个样例项目的截图
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{本软件平台的LVAF组成}
+    这里需要一张图
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{状态设计模式：State Actor}
+    讲讲协调者是怎么设计的
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{看看软件界面}
+    这里需要一张图
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{2.2远程人机交互软件设计的UML描述}
+    \subsection{UML}
+    \begin{itemize}
+        \item UML：面向对象程序的通用建模语言
+        \item 七大类图
+    \end{itemize}
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{用例图描述软件设计需求}
+    这里需要一张图
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{组件图描述静态结构}
+    这里需要一张图
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{顺序图描述动态结构}
+    这里需要一张图
+    并且需要举例子
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{2.3rosbridge client implementation in LabVIEW}
+    subsection{rosbridge client}
+    \begin{itemize}
+        \item 什么是rosbridge
+        \item rosbridge通信规约
+        \item 怎么使用
+    \end{itemize}
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{rosbridge client与ROS通信}
+    这里需要一张图片
+\end{frame}
+%--- Next Frame ---%
+\begin{frame}[t]{演示}
+    \subsection{Video}
+    点击此处打开视频
+\end{frame}
+%--- Next Frame ---%
 \begin{frame}[t]{3.基于ROS的移动机器人实验系统设计和实现}
-    \section{基于ROS的移动机器人实验系统}
+    \section{基于ROS的移动机器人实验系统设计与实现}
 \end{frame}
 %--- Next Frame ---%
 

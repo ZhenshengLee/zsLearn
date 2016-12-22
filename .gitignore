@@ -3,8 +3,8 @@
 bin/
 build/
 
-*.nav
-*.snm
+# Ignore big multimedia files
+*.avi
 *.mp4
 
 ## Core latex/pdflatex auxiliary files:
@@ -20,7 +20,9 @@ build/
 *.cb
 *.cb2
 
-
+# Ignore additional Intermediate files for xelatex
+*.nav
+*.snm
 
 ## Intermediate documents:
 *.dvi
