@@ -3,6 +3,10 @@
 bin/
 build/
 
+# Ignore big multimedia files
+*.avi
+*.mp4
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -15,6 +19,9 @@ build/
 *.fot
 *.cb
 *.cb2
+
+*.nav
+*.snm
 
 ## Intermediate documents:
 *.dvi
