@@ -1,0 +1,10 @@
+@startuml
+actor Supervisor
+participant CoordinatorState
+participant ControlPanel
+Supervisor <-> ControlPanel : Interact with ControlPanel
+ControlPanel -> CoordinatorState : GoToGuidingMsg.lvclass
+rnote over CoordinatorState : 进入Guiding状态
+rnote over CoordinatorState : 读取上次任务信息
+rnote over CoordinatorState : 继续语音控制
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+actor Supervisor
+Supervisor <-> ControlPanel : Interact with ControlPanel
+ControlPanel -> CoordinatorState : P3AT_Panel_Msg.lvclass
+rnote over CoordinatorState : 参数配置
+CoordinatorState -> CoordinatorState : GoToGuidingMsg.lvclass
+rnote over CoordinatorState : 进入Guiding状态
+Supervisor <-> Voice : Interact with Voice
+@enduml

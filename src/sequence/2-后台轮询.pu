@@ -1,0 +1,35 @@
+@startuml
+actor Supervisor
+participant JoyStick
+participant ControlPanel
+participant CoordinatorState
+participant RemoteP3AT
+participant MapDispayer
+actor P3ATRobot
+== 后台轮询：检查外设，读取机器人状态并显示 ==
+group
+loop 33 ms
+JoyStick -> ControlPanel : XBOX_Control_Msg.lvclass
+rnote over ControlPanel : 检查数据合法性
+end
+group
+loop 50 ms
+ControlPanel -> CoordinatorState : XBOX_Control_Msg.lvclass
+rnote over CoordinatorState : 协调全局状态
+end
+loop 100 ms
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+actor P3ATRobot
+end
+loop 100 ms
+RemoteP3AT -> CoordinatorState : robot_position_Msg.lvclass \n sensor_Msg.lvclass
+rnote over CoordinatorState : 检查并协调
+end
+loop 50 ms
+CoordinatorState -> ControlPanel : sensor_Msg.lvclass
+rnote over ControlPanel : 显示传感器数据
+CoordinatorState -> MapDispayer : robot_position_Msg.lvclass
+rnote over MapDispayer : 更新地图
+end
+
+@enduml

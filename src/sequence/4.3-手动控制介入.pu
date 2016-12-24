@@ -1,0 +1,21 @@
+@startuml
+actor Supervisor
+participant ControlPanel
+participant CoordinatorState
+participant RemoteP3AT
+actor P3ATRobot
+RemoteP3AT -> CoordinatorState : sensor_Msg.lvclass
+rnote over CoordinatorState : 机器人状态出错
+CoordinatorState -> CoordinatorState : GoToReadyMsg.lvclass
+rnote over CoordinatorState : 存储此次任务信息
+rnote over CoordinatorState : 进入Ready状态
+CoordinatorState -> ControlPanel : P3AT_Panel_Msg.lvclass
+rnote over ControlPanel : 显示出错信息
+ControlPanel <-> Supervisor : Interact with ControlPanel
+ControlPanel -> CoordinatorState : GoToManualMsg.lvclass
+rnote over CoordinatorState : 进入Manual状态
+ControlPanel -> CoordinatorState : XBOX_Control_Msg.lvclass
+rnote over CoordinatorState : 检查并计算
+CoordinatorState -> RemoteP3AT : vel_cal_Msg.lvclass
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+@enduml

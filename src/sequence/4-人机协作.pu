@@ -1,0 +1,54 @@
+@startuml
+actor Supervisor
+participant JoyStick
+participant Voice
+participant ControlPanel
+participant CoordinatorState
+participant GlobalPlanner
+participant RemoteP3AT
+actor P3ATRobot
+== 人机协作：以语音控制，出错后手动控制介入，故障解除后恢复任务为例 ==
+group 人机交互
+Supervisor <-> ControlPanel : Interact with ControlPanel
+ControlPanel -> CoordinatorState : P3AT_Panel_Msg.lvclass
+rnote over CoordinatorState : 参数配置
+CoordinatorState -> CoordinatorState : GoToGuidingMsg.lvclass
+rnote over CoordinatorState : 进入Guiding状态
+Supervisor <-> Voice : Interact with Voice
+end
+group 语音控制
+Voice -> ControlPanel : Semantic_Voice_Array_Msg.lvclass
+rnote over ControlPanel : 检查
+ControlPanel -> CoordinatorState : Semantic_Voice_Array_Msg.lvclass
+rnote over CoordinatorState : 协调
+CoordinatorState -> GlobalPlanner : Semantic_Voice_Array_Msg.lvclass
+rnote over GlobalPlanner : 计算
+GlobalPlanner -> CoordinatorState : LocalGoalMsg.lvclass
+CoordinatorState -> RemoteP3AT : LocalGoalMsg.lvclass
+actor P3ATRobot
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+end
+group 手动控制介入
+RemoteP3AT -> CoordinatorState : sensor_Msg.lvclass
+rnote over CoordinatorState : 机器人状态出错
+CoordinatorState -> CoordinatorState : GoToReadyMsg.lvclass
+rnote over CoordinatorState : 存储此次任务信息
+rnote over CoordinatorState : 进入Ready状态
+CoordinatorState -> ControlPanel : P3AT_Panel_Msg.lvclass
+rnote over ControlPanel : 显示出错信息
+ControlPanel <-> Supervisor : Interact with ControlPanel
+ControlPanel -> CoordinatorState : GoToManualMsg.lvclass
+rnote over CoordinatorState : 进入Manual状态
+ControlPanel -> CoordinatorState : XBOX_Control_Msg.lvclass
+rnote over CoordinatorState : 检查并计算
+CoordinatorState -> RemoteP3AT : vel_cal_Msg.lvclass
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+end
+group 恢复任务
+Supervisor <-> ControlPanel : Interact with ControlPanel
+ControlPanel -> CoordinatorState : GoToGuidingMsg.lvclass
+rnote over CoordinatorState : 进入Guiding状态
+rnote over CoordinatorState : 读取上次任务信息
+rnote over CoordinatorState : 继续语音控制
+end
+@enduml

@@ -1,0 +1,114 @@
+@startuml
+== 启动和初始化 ==
+group 启动程序
+actor Supervisor
+create CoordinatorState
+hnote over Supervisor : LaunchCOUI.vi \n LaunchRootActor.vi
+Supervisor -> CoordinatorState : Launch CoordinatorState
+end
+group 初始化
+CoordinatorState -> CoordinatorState : GoToReadyMsg.lvclass
+rnote over CoordinatorState : 进入Ready状态
+create ControlPanel
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> ControlPanel : Initiate ControlPanel
+create GlobalPlanner
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> GlobalPlanner : Initiate GlobalPlanner
+create RemoteP3AT
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> RemoteP3AT : Initiate RemoteP3AT
+create MapDispayer
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> MapDispayer : Initiate MapDispayer
+create JoyStick
+hnote over ControlPanel : LaunchNestedActor.vi
+ControlPanel -> JoyStick : Initiate JoyStick
+create Voice
+hnote over ControlPanel : LaunchNestedActor.vi
+ControlPanel -> Voice : Initiate Voice
+end
+actor P3ATRobot
+== 后台轮询：检查外设，读取机器人状态并显示 ==
+group
+loop 33 ms
+JoyStick -> ControlPanel : XBOX_Control_Msg.lvclass
+rnote over ControlPanel : 检查数据合法性
+end
+group
+loop 50 ms
+ControlPanel -> CoordinatorState : XBOX_Control_Msg.lvclass
+rnote over CoordinatorState : 协调全局状态
+end
+loop 100 ms
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+end
+loop 100 ms
+RemoteP3AT -> CoordinatorState : robot_position_Msg.lvclass \n sensor_Msg.lvclass
+rnote over CoordinatorState : 检查并协调
+end
+loop 50 ms
+CoordinatorState -> ControlPanel : sensor_Msg.lvclass
+rnote over ControlPanel : 显示传感器数据
+CoordinatorState -> MapDispayer : robot_position_Msg.lvclass
+rnote over MapDispayer : 更新地图
+end
+== 配置机器人：参数配置和初始定位==
+group 人机交互
+Supervisor <-> ControlPanel : Interact with ControlPanel
+end
+group 参数配置
+ControlPanel -> CoordinatorState : P3AT_Panel_Msg.lvclass
+rnote over CoordinatorState : 检查数据合法性
+CoordinatorState -> RemoteP3AT : P3AT_Panel_Msg.lvclass
+end
+group 初始定位
+ControlPanel -> CoordinatorState : Send P3AT_Ini_Pose_Msg.lvclass
+rnote over CoordinatorState : 检查数据合法性
+CoordinatorState -> RemoteP3AT : Send P3AT_Ini_Pose_Msg.lvclass
+end
+== 人机协作：以语音控制，出错后手动控制介入，故障解除后恢复任务为例 ==
+group 人机交互
+Supervisor <-> ControlPanel : Interact with ControlPanel
+ControlPanel -> CoordinatorState : P3AT_Panel_Msg.lvclass
+rnote over CoordinatorState : 参数配置
+CoordinatorState -> CoordinatorState : GoToGuidingMsg.lvclass
+rnote over CoordinatorState : 进入Guiding状态
+Supervisor <-> Voice : Interact with Voice
+end
+group 语音控制
+Voice -> ControlPanel : Semantic_Voice_Array_Msg.lvclass
+rnote over ControlPanel : 检查
+ControlPanel -> CoordinatorState : Semantic_Voice_Array_Msg.lvclass
+rnote over CoordinatorState : 协调
+CoordinatorState -> GlobalPlanner : Semantic_Voice_Array_Msg.lvclass
+rnote over GlobalPlanner : 计算
+GlobalPlanner -> CoordinatorState : LocalGoalMsg.lvclass
+CoordinatorState -> RemoteP3AT : LocalGoalMsg.lvclass
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+end
+group 手动控制介入
+RemoteP3AT -> CoordinatorState : sensor_Msg.lvclass
+rnote over CoordinatorState : 机器人状态出错
+CoordinatorState -> CoordinatorState : GoToReadyMsg.lvclass
+rnote over CoordinatorState : 存储此次任务信息
+rnote over CoordinatorState : 进入Ready状态
+CoordinatorState -> ControlPanel : P3AT_Panel_Msg.lvclass
+rnote over ControlPanel : 显示出错信息
+ControlPanel <-> Supervisor : Interact with ControlPanel
+ControlPanel -> CoordinatorState : GoToManualMsg.lvclass
+rnote over CoordinatorState : 进入Manual状态
+ControlPanel -> CoordinatorState : XBOX_Control_Msg.lvclass
+rnote over CoordinatorState : 检查并计算
+CoordinatorState -> RemoteP3AT : vel_cal_Msg.lvclass
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+end
+group 恢复任务
+Supervisor <-> ControlPanel : Interact with ControlPanel
+ControlPanel -> CoordinatorState : GoToGuidingMsg.lvclass
+rnote over CoordinatorState : 进入Guiding状态
+rnote over CoordinatorState : 读取上次任务信息
+rnote over CoordinatorState : 继续语音控制
+end
+== 结束程序 ==
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+skinparam monochrome true
+[*] -down-> Ready
+Ready -down-> Guiding : 外部转换\n 指令
+Guiding -up-> Ready : 外部转换指令，\n 机器人状态错误，\n 程序错误
+Ready -down-> Manual : 外部转换\n 指令
+Manual -up-> Ready : 外部转换指令，\n 机器人状态错误，\n 程序错误
+Guiding -right-> Manual : 外部转换指令，\n 内部错误
+Manual -left-> Guiding : 外部转换\n 指令
+Ready -down-> [*]
+Guiding -up-> [*]
+Manual -up-> [*]
+Ready : 手柄指令消息接口：关闭
+Ready : 语音指令消息接口：关闭
+Ready : 配置和状态消息接口：开放
+Guiding : 手柄指令消息接口：关闭
+Guiding : 语音指令消息接口：开放
+Guiding : 配置和状态消息接口：开放
+Manual : 手柄指令消息接口：开放
+Manual : 语音指令消息接口：关闭
+Manual : 配置和状态消息接口：开放
+@enduml

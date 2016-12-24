@@ -1,0 +1,18 @@
+@startuml
+actor Supervisor
+participant Voice
+participant ControlPanel
+participant CoordinatorState
+participant GlobalPlanner
+participant RemoteP3AT
+actor P3ATRobot
+Voice -> ControlPanel : Semantic_Voice_Array_Msg.lvclass
+rnote over ControlPanel : 检查
+ControlPanel -> CoordinatorState : Semantic_Voice_Array_Msg.lvclass
+rnote over CoordinatorState : 协调
+CoordinatorState -> GlobalPlanner : Semantic_Voice_Array_Msg.lvclass
+rnote over GlobalPlanner : 计算
+GlobalPlanner -> CoordinatorState : LocalGoalMsg.lvclass
+CoordinatorState -> RemoteP3AT : LocalGoalMsg.lvclass
+RemoteP3AT <-> P3ATRobot : Interact with P3ATRobot
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+actor Supervisor
+== 配置机器人：参数配置和初始定位==
+group 人机交互
+Supervisor <-> ControlPanel : Interact with ControlPanel
+end
+group 参数配置
+ControlPanel -> CoordinatorState : P3AT_Panel_Msg.lvclass
+rnote over CoordinatorState : 检查数据合法性
+CoordinatorState -> RemoteP3AT : P3AT_Panel_Msg.lvclass
+end
+group 初始定位
+ControlPanel -> CoordinatorState : Send P3AT_Ini_Pose_Msg.lvclass
+rnote over CoordinatorState : 检查数据合法性
+CoordinatorState -> RemoteP3AT : Send P3AT_Ini_Pose_Msg.lvclass
+end
+actor P3ATRobot
+@enduml

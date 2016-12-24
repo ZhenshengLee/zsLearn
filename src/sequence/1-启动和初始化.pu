@@ -1,0 +1,32 @@
+@startuml
+== 启动和初始化 ==
+group 启动程序
+actor Supervisor
+create CoordinatorState
+hnote over Supervisor : LaunchCOUI.vi \n LaunchRootActor.vi
+Supervisor -> CoordinatorState : Launch CoordinatorState
+end
+group 初始化
+CoordinatorState -> CoordinatorState : GoToReadyMsg.lvclass
+rnote over CoordinatorState : 进入Ready状态
+create ControlPanel
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> ControlPanel : Initiate ControlPanel
+create GlobalPlanner
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> GlobalPlanner : Initiate GlobalPlanner
+create RemoteP3AT
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> RemoteP3AT : Initiate RemoteP3AT
+create MapDispayer
+hnote over CoordinatorState : LaunchNestedActor.vi
+CoordinatorState -> MapDispayer : Initiate MapDispayer
+create JoyStick
+hnote over ControlPanel : LaunchNestedActor.vi
+ControlPanel -> JoyStick : Initiate JoyStick
+create Voice
+hnote over ControlPanel : LaunchNestedActor.vi
+ControlPanel -> Voice : Initiate Voice
+end
+actor P3ATRobot
+@enduml
