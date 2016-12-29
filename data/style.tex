@@ -1,19 +1,20 @@
 \usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry} % 用于设置页面布局
-\usepackage{xeCJK} % 用于使用本地字体
-\usepackage[super, square, sort&compress]{natbib} % 处理参考文献
+\usepackage{xeCJK}  % 用于使用本地字体
+\usepackage[super, square, sort&compress]{natbib}   % 处理参考文献
 \usepackage{titlesec, titletoc} % 设置章节标题及页眉页脚
-%\usepackage{xCJKnumb} % 中英文数字转换
+%\usepackage{xCJKnumb}  % 中英文数字转换
 \usepackage{amssymb}
-\usepackage{amsmath} % 在公式中用\text{文本}输入中文
-\usepackage{diagbox}
-\usepackage{multirow} % 表格中使用多行
-\usepackage{booktabs} % 表格中使用\toprule等命令
-\usepackage{rotating} % 使用sidewaystable环境旋转表格
-\usepackage{tabularx}
-\usepackage{graphicx} % 处理图片
-\usepackage{footnote} % 增强的脚注功能，可添加表格脚注
+\usepackage{amsmath}    % 在公式中用\text{文本}输入中文
+\usepackage{diagbox}    % 斜线表
+\usepackage{multirow}   % 表格中使用多行
+\usepackage{booktabs}   % 三线表
+\usepackage{rotating}   % 使用sidewaystable环境旋转表格
+\usepackage{tabularx}   % 定宽表格
+\usepackage{graphicx}   % 处理图片
+\usepackage{footnote}   % 增强的脚注功能，可添加表格脚注
 \usepackage{threeparttable} % 添加真正的表格脚注,示例见README
-\usepackage{hyperref} % 添加pdf书签
+\usepackage{hyperref}   % 添加pdf书签
+\usepackage{listings}   % 添加代码高亮
 
 % 字体设置
 \setmainfont{Times New Roman}
@@ -61,9 +62,17 @@
 \setlength{\abovecaptionskip}{0pt}
 \setlength{\belowcaptionskip}{0pt}
 
+% 代码格式自定义
+\lstset{
+    basicstyle=\sffamily,
+    keywordstyle=\bfseries,
+    commentstyle=\rmfamily\itshape,
+    stringstyle=\ttfamily
+}
 
+% 命令重定义 
 \renewcommand{\refname}{\bfseries{参~考~文~献}} %将Reference改为参考文献（用于 article）
-% \renewcommand{\bibname}{参~考~文~献} %将bibiography改为参考文献（用于 book）
-\renewcommand{\baselinestretch}{1.38} %设置行间距
+% \renewcommand{\bibname}{参~考~文~献}%将bibiography改为参考文献（用于 book）
+\renewcommand{\baselinestretch}{1.38}   %设置行间距
 \renewcommand{\figurename}{\small\ttfamily 图}
 \renewcommand{\tablename}{\small\ttfamily 表}

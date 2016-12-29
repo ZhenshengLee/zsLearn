@@ -2,11 +2,16 @@
 \input{data/style}
 
 \title{我的xelatex文档模板}
-\author{EvanYuWILLBEzs}
+\author{黎振胜}
 \date{\today}
 
 \begin{document}
 \maketitle{}
+
+\section{致谢和修改}
+此文档以EvanYu的模板为基础，特此感谢！
+
+修正了表格竖线不能闭合的问题，完善了sty文件和相关注释。
 
 \section{说明}
 之所以制作这个模板是因为用 \LaTeX{} 这么久了，每次要写一个新的文档都从头开始未免也太麻烦了，既然了解了那么多基础的知识了就做这么一个简单的 article 模板。虽然整理这个模板花了一些时间，不过这些时间都是相当的值得的，避免了我以后的重复性工作。这个文档是这个模板使用的一个示例文档，在 README.org 文件里面也含有这部分的源代码，便于写文档时参照使用。
@@ -14,14 +19,14 @@
 \section{插入图片}
 图片的插入对于文档来说是一个比较重要的方面，这里我选择的是插入一个浮动的环境，然后可以添加包括 caption、label 等标签，代码如下，示例见图\ref{pic:picturelabel}。
 
-\begin{verbatim}
+\begin{lstlisting}[language=tex]
 \begin{figure}[h]
 \centering
 \label{pic:picturelabel}
 \includegraphics[width=\textwidth]{data/figures/9}
 \caption{\LaTeX{}图片插入}
 \end{figure}
-\end{verbatim}
+\end{lstlisting}
 
 % 插入图片示例
 \begin{figure}[h]
@@ -40,29 +45,29 @@
 \caption{指定宽度-列自动换行表格}\label{tab:table1}
 \centering
 \begin{tabularx}{\textwidth}{c|X|c}
-\toprule
+\hline
 \multirow{2}{*}{多行} & \multicolumn{2}{c}{多列} \\
 \cline{2-3}
 & data & comment \\
-\midrule
+\hline
 第一行 & 数据 & 注释 \\
-\bottomrule
+\hline
 \end{tabularx}
 \end{table}
-
 \end{verbatim}
+
 % 指定表格宽度并设置自动换行示例
 \begin{table}[h]
 \caption{指定宽度-列自动换行表格}\label{tab:table1}
 \centering
 \begin{tabularx}{\textwidth}{c|X|c}
-\toprule
+\hline
 \multirow{2}{*}{多行} & \multicolumn{2}{c}{多列} \\
 \cline{2-3}
 & data & comment \\
-\midrule
+\hline
 第一行 & 数据 & 注释 \\
-\bottomrule
+\hline
 \end{tabularx}
 \end{table}
 
@@ -73,13 +78,13 @@
 \begin{table}[h]
 \caption{普通表格}\label{tab:table2}
 \centering
-\begin{tabularx}{0.5\textwidth}{|l|ccc|}
-\toprule
+\begin{tabular}{|l|ccc|}
+\hline
 \diagbox{名称}{编号} & id & data & comment \\
-\midrule
-名称 & 1 & 数据 & 注释好像没有什么\\
-\bottomrule
-\end{tabularx}
+\hline
+名称 & 1 & 数据 & 注释好像没有有\\
+\hline
+\end{tabular}
 \end{table}
 \end{verbatim}
 
@@ -87,13 +92,13 @@
 \begin{table}[h]
 \caption{普通表格}\label{tab:table2}
 \centering
-\begin{tabularx}{0.5\textwidth}{|l|ccc|}
-\toprule
+\begin{tabular}{|l|ccc|}
+\hline
 \diagbox{名称}{编号} & id & data & comment \\
-\midrule
-名称 & 1 & 数据 & 注释好像没有什么\\
-\bottomrule
-\end{tabularx}
+\hline
+名称 & 1 & 数据 & 注释好像没有\\
+\hline
+\end{tabular}
 \end{table}
 
 \subsection{带脚注的表格}
@@ -105,13 +110,13 @@
 \centering
 \begin{threeparttable}
 \begin{tabularx}{\textwidth}{c|X|c}
-\toprule
+\hline
 \multirow{2}{*}{多行} & \multicolumn{2}{|c|}{多列} \\
 \cline{2-3}
  & data\tnote{1} & comment \\
-\midrule
+\hline
 第一行 & 数据 & 注释\tnote{2} \\
-\bottomrule
+\hline
 \end{tabularx}
 \begin{tablenotes}
 \item \footnotesize{[1] 第一个脚注是data}
@@ -127,13 +132,13 @@
 \centering
 \begin{threeparttable}
 \begin{tabularx}{\textwidth}{c|X|c}
-\toprule
+\hline
 \multirow{2}{*}{多行} & \multicolumn{2}{c}{多列} \\
 \cline{2-3}
  & data\tnote{1} & comment \\
-\midrule
+\hline
 第一行 & 数据 & 注释\tnote{2} \\
-\bottomrule
+\hline
 \end{tabularx}
 \begin{tablenotes}
 \item \footnotesize{[1] 第一个脚注是data}
@@ -144,16 +149,29 @@
 
 % 参考文献示例
 \section{参考文献使用}
-参考文献使用的样式为 plainnat，bib 文件所在的位置为 data/reference.bib。当然，参考文献可以使用多个文件。比如我的参考文献比较多，分类存在 1.bib、2.bib 这两个文件中，可以使用命令：\textbackslash{}bibliography\{data/1.bib,data/2.bib\}。我在 data/reference.bib 文件中加入了一条记录，使用看我的右上角\cite{bib文献标记}。另外，我这里为了让参考文献在一页的开头使用了\textbackslash{}newpage 命令，空出来一页之后再添加参考文献。为了让参考文献的标题居中，在插入参考文献之前添加了如下命令：
+参考文献使用的样式为 plainnat，bib 文件所在的位置为 data/reference.bib。当然，参考文献可以使用多个文件。比如我的参考文献比较多，分类存在 1.bib、2.bib 这两个文件中
+可以使用命令：\textbackslash{}bibliography\{data/1.bib,data/2.bib\}。
+我在 data/reference.bib 文件中加入了一条记录，使用看我的右上角\cite{刘海洋2013latex}。
+另外，我这里为了让参考文献在一页的开头使用了\textbackslash{}newpage 命令，空出来一页之后再添加参考文献。
+为了让参考文献的标题居中，在插入参考文献之前添加了如下命令：
 
 \verb|\titleformat{\section}{\centering\sanhao}{\chaptertitlename}{15pt}{}|
+
+注意，xelatex生成参考文献页面比较麻烦，需要以下四个步骤，有时候还需要手动删除一些临时文件后重试
+
+\begin{lstlisting}[language=bash]
+    xelatex zstexart.tex
+    bibtex zstexart.aux
+    xelatex zstexart.tex
+    xelatex zstexart.tex
+\end{lstlisting}
 
 \section{后记}
 原本我在 github 上是建立了一个 repos 的，但是总是觉得其结构不是很好，本来打算新建一个 branch 来进行结构修改，但这本身就是一个比较小的工程，所以干脆重新来过算了。暂时来说优化了以前很多的结构，也修复了一些错误。便于以后再进行修改。
 
 \newpage
 \titleformat{\section}{\centering\sanhao}{\chaptertitlename}{15pt}{}
-% 指定参考文献样式和 bib 文件
+% % 指定参考文献样式和 bib 文件
 \bibliographystyle{plainnat}
 \bibliography{data/reference}
 \end{document}
