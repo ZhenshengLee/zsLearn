@@ -1,18 +1,25 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(pat_basic)
+project(apue)
 
+# using cmaktools in vscode
+include(CMakeToolsHelpers OPTIONAL)
+
+# which cpp standard you use
 #SET(CMAKE_CXX_FLAGS "-std=c++11")
 
-set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+# set before finding packages
+list(APPEND CMAKE_MODULE_PATH ./cmake)
 
 # find packages
 
 # include dirs
-include_directories(/usr/include )
+include_directories(
+    /usr/include
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/lib
+    )
 
-add_executable(hello_world src/Basic/hello_world.cpp)
-add_executable(1025 src/Basic/1025.cpp)
-add_executable(1035 src/Basic/1035.cpp)
-#add_executable(1045 src/Basic/1045.cpp)
-#add_executable(1050 src/Basic/1050.cpp)
-add_executable(0312a src/Test/0312a.cpp)
+# add subdirectories
+add_subdirectory("src/hello_world")
+
+# add executable

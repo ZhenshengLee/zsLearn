@@ -1,6 +1,2 @@
 .idea/
-.vscode/.browse.VC.db
-bin/
 build/
-include/
-script/

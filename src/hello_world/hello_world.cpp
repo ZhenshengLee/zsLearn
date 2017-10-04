@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int zs(int i){
+inline int zs(int i){
 	return i+1;
 }
 
-int main(int argc,char *argv[]){
+int main(){
 	int num;
 	num=1;
 	cin >> num;
