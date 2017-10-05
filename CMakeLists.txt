@@ -29,3 +29,10 @@ add_subdirectory("./lib")
 add_subdirectory("src/hello_world")
 
 # add executable
+
+# CTest
+if(NOT without-test)
+    enable_testing()
+    include(CTest)
+    add_subdirectory("./gtest-1.8.0")
+endif()
