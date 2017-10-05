@@ -4,7 +4,8 @@
 
 TEST(hello_world, integer)
 {
-    int expected = 2;
-    int actual = zs(1);
+    zs zs_circle(1);
+    double expected = 9.8596;
+    double actual = zs_circle.getArea();
     ASSERT_EQ(expected, actual);
 }

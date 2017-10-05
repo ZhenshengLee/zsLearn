@@ -5,18 +5,7 @@ project(apue)
 include(CMakeToolsHelpers OPTIONAL)
 
 # predefine some variables
-# set(CMAKE_BUILD_TYPE 
-#     RelWithDebInfo 
-#     CACHE STRING 
-#     "Whether to include debug symbols, one of Debug|Release|RelWithDebInfo" 
-#     FORCE
-# )
 
-# set_property(CACHE 
-#     CMAKE_BUILD_TYPE 
-#     PROPERTY STRINGS 
-#     "Debug" "Release" "RelWithDebInfo"
-# )
 
 # set output path
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
@@ -24,7 +13,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE})
 
 # set cpp standard
-# set(CMAKE_CXX_FLAGS "-Wall") # applies to all build types
+set(CMAKE_CXX_FLAGS "-std=c++11 -Wall")
 # set(CMAKE_CXX_FLAGS_DEBUG "")
 # set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 # set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2")
