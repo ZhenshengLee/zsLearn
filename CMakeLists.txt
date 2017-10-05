@@ -4,7 +4,11 @@ project(apue)
 # using cmaktools in vscode
 include(CMakeToolsHelpers OPTIONAL)
 
-# which cpp standard you use
+# set output path
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+
+# set cpp standard
 #SET(CMAKE_CXX_FLAGS "-std=c++11")
 
 # set before finding packages
@@ -20,6 +24,8 @@ include_directories(
     )
 
 # add subdirectories
+add_subdirectory("./include")
+add_subdirectory("./lib")
 add_subdirectory("src/hello_world")
 
 # add executable

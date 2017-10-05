@@ -1,0 +1,1 @@
+add_library(apue SHARED zs.cpp)
