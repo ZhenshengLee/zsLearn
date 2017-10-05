@@ -1,6 +1,9 @@
 # add executable
 add_executable(hello_world hello_world.cpp)
-target_link_libraries(hello_world apue)
+target_link_libraries(hello_world
+    apue
+    ${Log4CXX_LIBRARY}
+    )
 
 # CTest
 enable_testing()

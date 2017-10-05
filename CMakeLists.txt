@@ -1,24 +1,44 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.7.2)
 project(apue)
 
 # using cmaktools in vscode
 include(CMakeToolsHelpers OPTIONAL)
 
+# predefine some variables
+# set(CMAKE_BUILD_TYPE 
+#     RelWithDebInfo 
+#     CACHE STRING 
+#     "Whether to include debug symbols, one of Debug|Release|RelWithDebInfo" 
+#     FORCE
+# )
+
+# set_property(CACHE 
+#     CMAKE_BUILD_TYPE 
+#     PROPERTY STRINGS 
+#     "Debug" "Release" "RelWithDebInfo"
+# )
+
 # set output path
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE})
 
 # set cpp standard
-#SET(CMAKE_CXX_FLAGS "-std=c++11")
+# set(CMAKE_CXX_FLAGS "-Wall") # applies to all build types
+# set(CMAKE_CXX_FLAGS_DEBUG "")
+# set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+# set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2")
 
 # set before finding packages
-list(APPEND CMAKE_MODULE_PATH ./cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
 # find packages
+find_package(Log4CXX REQUIRED)
 
 # include dirs
 include_directories(
     /usr/include
+    ${log4cxx_INCLUDE_DIR}
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/lib
     )
