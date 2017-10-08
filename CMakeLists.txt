@@ -10,7 +10,6 @@ include(CMakeToolsHelpers OPTIONAL)
 # set output path
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE})
 
 # set cpp standard
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wall")

@@ -23,86 +23,6 @@
                   {
                     "isGenerated": true,
                     "sources": [
-                      "build/CMakeFiles/ExperimentalStart",
-                      "build/CMakeFiles/ExperimentalStart.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalStart",
-                "name": "ExperimentalStart",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ContinuousConfigure",
-                      "build/CMakeFiles/ContinuousConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousConfigure",
-                "name": "ContinuousConfigure",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/NightlyCoverage",
-                      "build/CMakeFiles/NightlyCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "NightlyCoverage",
-                "name": "NightlyCoverage",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ExperimentalUpdate",
-                      "build/CMakeFiles/ExperimentalUpdate.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalUpdate",
-                "name": "ExperimentalUpdate",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ExperimentalConfigure",
-                      "build/CMakeFiles/ExperimentalConfigure.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ExperimentalConfigure",
-                "name": "ExperimentalConfigure",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
                       "build/CMakeFiles/ExperimentalCoverage",
                       "build/CMakeFiles/ExperimentalCoverage.rule"
                     ]
@@ -144,103 +64,6 @@
                 "name": "NightlyConfigure",
                 "sourceDirectory": "/home/zs/Documents/code/zsLearn",
                 "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "/home/zs/Documents/code/zsLearn/build/bin/Debug/hello_world"
-                ],
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build/src/hello_world",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-std=c++11 -Wall -g  ",
-                    "includePath": [
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/include"
-                      },
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/lib"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "hello_world.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "hello_world",
-                "linkLanguageFlags": "-std=c++11 -Wall -g",
-                "linkLibraries": "-Wl,-rpath,/home/zs/Documents/code/zsLearn/build/bin ../../bin/libapue.so /usr/lib/x86_64-linux-gnu/liblog4cxx.so",
-                "linkerLanguage": "CXX",
-                "name": "hello_world",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn/src/hello_world",
-                "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "/home/zs/Documents/code/zsLearn/build/bin/Debug/hello_world_test"
-                ],
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build/src/hello_world",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-std=c++11 -Wall -g  ",
-                    "includePath": [
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/include"
-                      },
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/lib"
-                      },
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/gtest-1.8.0/googletest/include"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "hello_world_test.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "hello_world_test",
-                "linkLanguageFlags": "-std=c++11 -Wall -g",
-                "linkLibraries": "-Wl,-rpath,/home/zs/Documents/code/zsLearn/build/bin ../../bin/libgtest.a ../../bin/libgtest_main.a -lpthread ../../bin/libapue.so ../../bin/libgtest.a -lpthread",
-                "linkerLanguage": "CXX",
-                "name": "hello_world_test",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn/src/hello_world",
-                "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "/home/zs/Documents/code/zsLearn/build/bin/libapue.so"
-                ],
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build/lib",
-                "fileGroups": [
-                  {
-                    "compileFlags": "-std=c++11 -Wall -g -fPIC  ",
-                    "defines": [
-                      "apue_EXPORTS"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/include"
-                      },
-                      {
-                        "path": "/home/zs/Documents/code/zsLearn/lib"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "zs.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "libapue.so",
-                "linkerLanguage": "CXX",
-                "name": "apue",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn/lib",
-                "type": "SHARED_LIBRARY"
               },
               {
                 "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
@@ -355,84 +178,38 @@
                 "type": "UTILITY"
               },
               {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "artifacts": [
+                  "/home/zs/Documents/code/zsLearn/build/bin/hello_world_test"
+                ],
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build/src/hello_world",
                 "fileGroups": [
                   {
-                    "isGenerated": true,
+                    "compileFlags": "-std=c++11 -Wall -g  ",
+                    "includePath": [
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/include"
+                      },
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/lib"
+                      },
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/gtest-1.8.0/googletest/include"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
                     "sources": [
-                      "build/CMakeFiles/ContinuousSubmit",
-                      "build/CMakeFiles/ContinuousSubmit.rule"
+                      "hello_world_test.cpp"
                     ]
                   }
                 ],
-                "fullName": "ContinuousSubmit",
-                "name": "ContinuousSubmit",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ContinuousCoverage",
-                      "build/CMakeFiles/ContinuousCoverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousCoverage",
-                "name": "ContinuousCoverage",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ContinuousTest",
-                      "build/CMakeFiles/ContinuousTest.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousTest",
-                "name": "ContinuousTest",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ContinuousBuild",
-                      "build/CMakeFiles/ContinuousBuild.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousBuild",
-                "name": "ContinuousBuild",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/ContinuousMemCheck",
-                      "build/CMakeFiles/ContinuousMemCheck.rule"
-                    ]
-                  }
-                ],
-                "fullName": "ContinuousMemCheck",
-                "name": "ContinuousMemCheck",
-                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
-                "type": "UTILITY"
+                "fullName": "hello_world_test",
+                "linkLanguageFlags": "-std=c++11 -Wall -g",
+                "linkLibraries": "-Wl,-rpath,/home/zs/Documents/code/zsLearn/build/bin ../../bin/libgtest.a ../../bin/libgtest_main.a -lpthread ../../bin/libapue.so ../../bin/libgtest.a -lpthread",
+                "linkerLanguage": "CXX",
+                "name": "hello_world_test",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn/src/hello_world",
+                "type": "EXECUTABLE"
               },
               {
                 "artifacts": [
@@ -525,6 +302,86 @@
                   {
                     "isGenerated": true,
                     "sources": [
+                      "build/CMakeFiles/ContinuousSubmit",
+                      "build/CMakeFiles/ContinuousSubmit.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ContinuousSubmit",
+                "name": "ContinuousSubmit",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ContinuousCoverage",
+                      "build/CMakeFiles/ContinuousCoverage.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ContinuousCoverage",
+                "name": "ContinuousCoverage",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ContinuousTest",
+                      "build/CMakeFiles/ContinuousTest.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ContinuousTest",
+                "name": "ContinuousTest",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ContinuousBuild",
+                      "build/CMakeFiles/ContinuousBuild.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ContinuousBuild",
+                "name": "ContinuousBuild",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ContinuousMemCheck",
+                      "build/CMakeFiles/ContinuousMemCheck.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ContinuousMemCheck",
+                "name": "ContinuousMemCheck",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
                       "build/CMakeFiles/Nightly",
                       "build/CMakeFiles/Nightly.rule"
                     ]
@@ -600,6 +457,69 @@
                 "type": "UTILITY"
               },
               {
+                "artifacts": [
+                  "/home/zs/Documents/code/zsLearn/build/bin/libapue.so"
+                ],
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build/lib",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-std=c++11 -Wall -g -fPIC  ",
+                    "defines": [
+                      "apue_EXPORTS"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/include"
+                      },
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/lib"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "zs.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libapue.so",
+                "linkerLanguage": "CXX",
+                "name": "apue",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn/lib",
+                "type": "SHARED_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/home/zs/Documents/code/zsLearn/build/bin/hello_world"
+                ],
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build/src/hello_world",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-std=c++11 -Wall -g  ",
+                    "includePath": [
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/include"
+                      },
+                      {
+                        "path": "/home/zs/Documents/code/zsLearn/lib"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "hello_world.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "hello_world",
+                "linkLanguageFlags": "-std=c++11 -Wall -g",
+                "linkLibraries": "-Wl,-rpath,/home/zs/Documents/code/zsLearn/build/bin ../../bin/libapue.so /usr/lib/x86_64-linux-gnu/liblog4cxx.so",
+                "linkerLanguage": "CXX",
+                "name": "hello_world",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn/src/hello_world",
+                "type": "EXECUTABLE"
+              },
+              {
                 "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
                 "fileGroups": [
                   {
@@ -644,6 +564,86 @@
                 ],
                 "fullName": "NightlyMemCheck",
                 "name": "NightlyMemCheck",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ExperimentalStart",
+                      "build/CMakeFiles/ExperimentalStart.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ExperimentalStart",
+                "name": "ExperimentalStart",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ContinuousConfigure",
+                      "build/CMakeFiles/ContinuousConfigure.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ContinuousConfigure",
+                "name": "ContinuousConfigure",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/NightlyCoverage",
+                      "build/CMakeFiles/NightlyCoverage.rule"
+                    ]
+                  }
+                ],
+                "fullName": "NightlyCoverage",
+                "name": "NightlyCoverage",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ExperimentalUpdate",
+                      "build/CMakeFiles/ExperimentalUpdate.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ExperimentalUpdate",
+                "name": "ExperimentalUpdate",
+                "sourceDirectory": "/home/zs/Documents/code/zsLearn",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/zs/Documents/code/zsLearn/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/ExperimentalConfigure",
+                      "build/CMakeFiles/ExperimentalConfigure.rule"
+                    ]
+                  }
+                ],
+                "fullName": "ExperimentalConfigure",
+                "name": "ExperimentalConfigure",
                 "sourceDirectory": "/home/zs/Documents/code/zsLearn",
                 "type": "UTILITY"
               },
@@ -1123,7 +1123,7 @@
         ]
       }
     ],
-    "cookie": "0.9786349467626516",
+    "cookie": "0.7787137616323614",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

@@ -9,7 +9,9 @@ using namespace log4cxx;
 #define LOG_CONFIG() BasicConfigurator::configure();
 
 // TODO
-// #define LOG_CONFIG(PROPERTY_FILE) 
+// #define LOG_CONFIG(PROPERTY)
+
+// #define LOG_LEVEL(LEVEL) 
 
 // Note that TRACE level is compiled out in release (non-debug) mode.
 
