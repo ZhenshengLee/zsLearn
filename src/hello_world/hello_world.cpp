@@ -1,19 +1,14 @@
 #include <iostream>
+#include "logging.h"
 
 #include "zs.h"
 
-#include "logging.h"
-#include "log4cxx/basicconfigurator.h"
-#include <log4cxx/propertyconfigurator.h>
-
-LOG_INIT("HelloWorld");
-
 using namespace std;
-using namespace log4cxx;
 
 int main()
 {
-	BasicConfigurator::configure();
+	LOG_INIT("HelloWorld");
+	LOG_CONFIG();
 	int radius;
 	cout << "Please input the radius of the circle" << endl;
 	cin >> radius;

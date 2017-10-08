@@ -1,6 +1,15 @@
 #include "log4cxx/logger.h"
+#include "log4cxx/basicconfigurator.h"
+#include <log4cxx/propertyconfigurator.h>
 
-#define LOG_INIT(LOGGER_NAME) log4cxx::LoggerPtr logger(log4cxx::Logger::getLogger(LOGGER_NAME))
+using namespace log4cxx;
+
+#define LOG_INIT(LOGGER_NAME) static log4cxx::LoggerPtr logger(log4cxx::Logger::getLogger(LOGGER_NAME))
+
+#define LOG_CONFIG() BasicConfigurator::configure();
+
+// TODO
+// #define LOG_CONFIG(PROPERTY_FILE) 
 
 // Note that TRACE level is compiled out in release (non-debug) mode.
 
