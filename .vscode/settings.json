@@ -1,0 +1,80 @@
+{
+    // cpplint
+    "cpplint.cpplintPath": ["${workspaceRoot}/cpplint/cpplint.py"]
+
+    // // Place your settings in this file to overwrite the default settings
+    // // general-setting
+    // "files.autoSave": "onFocusChange",
+    // "extensions.autoUpdate": true,
+    // "git.confirmSync": false,
+    // "window.zoomLevel": 0,
+    // "workbench.startupEditor": "newUntitledFile",
+    // "workbench.iconTheme": "vscode-icons",
+    // "workbench.colorTheme": "One Dark Pro",
+    // "telemetry.enableTelemetry": false,
+    // "telemetry.enableCrashReporter": false,
+    // "editor.renderIndentGuides": false,
+    // "editor.minimap.enabled": true,
+    // "editor.detectIndentation": false,
+    // "editor.insertSpaces": true,
+    // // "http.proxy": "http://127.0.0.1:1080",
+    // // "http.proxyStrictSSL": false,
+
+    // // plantUML
+    // "amigo.renderer.JAVA_HOME": "/usr/lib/jvm/default-java",
+    
+    // // clang
+    // "clang.cflags": ["-std=c99"],
+    // "clang.cxxflags": ["-std=c++11"],
+    
+    // // code-runner
+    // "code-runner.defaultLanguage": "cpp",
+    // "code-runner.fileDirectoryAsCwd": false,
+    // "code-runner.saveFileBeforeRun": true,
+    // "code-runner.runInTerminal": true,
+    
+    // // setting-sync
+    // "sync.gist": "9ce02353e912509dd7eb859c20b36e8c",
+    // "sync.lastUpload": "2017-10-04T09:37:43.582Z",
+    // "sync.autoDownload": false,
+    // "sync.autoUpload": false,
+    // "sync.lastDownload": "2017-09-03T06:12:46.576Z",
+    // "sync.version": 262,
+    // "sync.showSummary": true,
+    // "sync.forceDownload": false,
+    // "sync.workspaceSync": false,
+    // "sync.anonymousGist": false,
+    // "sync.host": "",
+    // "sync.pathPrefix": "",
+    // "sync.quietSync": false,
+    // "sync.askGistName": false,
+    
+    // // code-spell checker
+    // "cSpell.userWords": [
+    //     "plantuml"
+    // ],
+
+    // // c-cpp-flylint
+    // "c-cpp-flylint.clang.enable": true,
+    // "c-cpp-flylint.cppcheck.enable": true,
+    // "c-cpp-flylint.flexelint.enable": false,
+    // "c-cpp-flylint.standard": [
+    //     "c11",
+    //     "c++11"
+    // ],
+    // "c-cpp-flylint.run": "onType",
+    // "c-cpp-flylint.includePaths": [
+    //     "usr/include",
+    //     "usr/local/include",
+    //     "${workspaceRoot}/include"
+    // ],
+    // "c-cpp-flylint.clang.includePaths": null,
+    // "c-cpp-flylint.clang.includes": null,
+
+    //  // c/c++ config
+    // "C_Cpp.intelliSenseEngine": "Tag Parser",
+
+    // // cmake-tools-helper
+    // "cmake-tools-helper.cmake_download_path": "/home/zs/.vscode/extensions/maddouri.cmake-tools-helper-0.1.1/cmake_download",
+
+}
