@@ -4,3 +4,4 @@ bin/
 build/
 include/
 script/
+.vscode/.cmaketools.json
