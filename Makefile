@@ -4,8 +4,8 @@ PROJECT := zs_pat_basic
 CXX_VERSION := -std=c++11
 
 # define files and directories
-CXX_SRCS := $(shell find src/ -name "*.cpp")
-HEADER_FILES := $(shell find include/ -name "*.h")
+CXX_SRCS := ./src/*.cpp
+HEADER_FILES := ./include/*.h
 LIB_FILES :=
 SRC_DIR := ./src
 INCLUDE_DIR := ./include
@@ -19,8 +19,7 @@ DEBUG_OPTIONS := -g
 # define build targets
 .PHONY : all
 all: $(BUILD_DIR)/hello_world \
-		$(BUILD_DIR)/1035 \
-		 $(BUILD_DIR)/1050 \
+
 		 
 		 
 $(BUILD_DIR)/% : $(SRC_DIR)/%.cpp
