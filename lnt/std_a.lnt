@@ -1,0 +1,8 @@
+//  Gnu C/C++ (version 2.95.3 or later), -si4 -sl4 -sp8, lib-stl.lnt lib-wnt.lnt
+//  Standard lint options
+
+au-sm123.lnt
+co-gcc.lnt
+lib-stl.lnt lib-wnt.lnt
+options.lnt  -si4 -sl4 -sp8
+

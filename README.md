@@ -9,6 +9,43 @@ Code learning Using MinGW
 pip install cpplint
 ```
 
+### pclint
+
+* 手动创建和配置lnt文件
+
+
+
+```s
+//  Gnu C/C++ (version 2.95.3 or later), -si4 -sl4 -sp8, lib-stl.lnt lib-wnt.lnt
+//  Standard lint options
+//	LINT-NT.EXE：	可执行文件，已升级到v9.00L。
+//	PATCH.EXE：	用于升级版本的工具。
+//	msg.txt：			消息描述文件，描述了各种警告信息。
+//	pc-lint.pdf：		PC-Lint在线手册。
+//	readme.txt：		在线手册的补充。
+//	lnt\
+//		co-xxx.lnt	编译器选项文件。
+//		env-xxx.lnt	编辑环境选项文件。
+//		lib-xxx.lnt	库相关的选项文件。
+//		sl-xxx.lnt	非ANSI编译器的标准库模块。
+//		au-xxx.lnt	推荐的检查规则文件，例如：MISRA规则。
+//		std.lnt		内存模型等全局性的选项。
+//      可以使用绝对路径
+
+
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\au-sm123.lnt
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\au-ds.lnt
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\au-misra2.lnt
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\co-mwwin32.lnt
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\lib-stl.lnt
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\lib-wnt.lnt
+e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
+-si4 -sl4 -sp8
+-i"D:\mingw64\lib\gcc\x86_64-w64-mingw32\7.1.0\include"
+-i"D:\mingw64\include"
+-i"D:\mingw64\opt\include"
+```
+
 ### vscode
 
 #### setting
@@ -47,19 +84,17 @@ pip install cpplint
     ],
 
     // c-cpp-flylint
-    "c-cpp-flylint.clang.enable": true,
+    "c-cpp-flylint.clang.enable": false,
     "c-cpp-flylint.cppcheck.enable": false,
-    "c-cpp-flylint.flexelint.enable": false,
+    "c-cpp-flylint.flexelint.enable": true,
     "c-cpp-flylint.flexelint.executable": "D:\\lint\\lint-nt.exe",
-    "c-cpp-flylint.flexelint.configFile": "std.lnt",
-    "c-cpp-flylint.standard": [
-        "c99",
-        "c++11"
-    ],
+    "c-cpp-flylint.flexelint.configFile": "./lnt/std.lnt",
     "c-cpp-flylint.run": "onType",
     "c-cpp-flylint.includePaths": [
-        "usr/include",
-        "usr/local/include",
+        "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+        "D:\\mingw64\\include",
+        "D:\\mingw64\\opt\\include",
+        "D:\\mngw64\\x86_64-w64-mingw32\\include",
         "${workspaceRoot}/include"
     ],
 
