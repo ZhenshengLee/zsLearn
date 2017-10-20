@@ -129,7 +129,7 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
 
     // vscode setting sync
     "sync.gist": "6004ed2706ca587a527f9e96d9887491",
-    "sync.lastUpload": "2017-10-17T15:59:19.262Z",
+    "sync.lastUpload": "2017-10-20T15:41:43.231Z",
     "sync.lastDownload": "2017-01-12T13:25:27.249Z",
     "sync.version": 262,
     "sync.autoDownload": false,
@@ -141,7 +141,112 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
     "sync.host": "",
     "sync.pathPrefix": "",
     "sync.quietSync": false,
-    "sync.askGistName": false
+    "sync.askGistName": false,
+    "git.enableSmartCommit": true,
+    
+    // auto comment tools
+    // file Header
+    "psi-header.config": {
+        "forceToTop": true,
+        "blankLinesAfter": 6,
+        "license": "Custom"
+    },
+    "psi-header.changes-tracking": {
+        "isActive": true,
+        "modAuthor": "修改者: ",
+        "modDate": "上次修改: ",
+        "modDateFormat": "日期",
+        "include": [],
+        "exclude": [
+            "markdown",
+            "json"
+        ],
+        "autoHeader": "manualSave"
+    },
+    "psi-header.license-text": [
+        "All shall be well and all shall be well and all manner of things shall be well.",
+        "We're doomed!"
+    ],
+    "psi-header.variables": [
+        ["company", "股份有限公司"],
+        ["author", "黎振胜"],
+        ["authoremail", "art@psioniq.uk"]
+    ],
+    "psi-header.lang-config": [
+        {
+            "language": "lua",
+            "begin": "--[[",
+            "prefix": "--",
+            "end": "--]]",
+            "blankLinesAfter": 0
+        },
+        {
+            "language": "python",
+            "begin": "###",
+            "prefix": "# ",
+            "end": "###",
+            "blankLinesAfter": 0,
+            "beforeHeader": [
+                "#!/usr/bin/env python3",
+                "# -*- coding:utf-8 -*-"
+            ]
+        },
+        {
+            "language": "javascript",
+            "begin": "/**",
+            "prefix": " * ",
+            "end": " */",
+            "blankLinesAfter": 2,
+            "forceToTop": false
+        },
+        {
+            "language": "typescript",
+            "mapTo": "javascript"
+        }
+    ],
+    "psi-header.templates": [
+        {
+            "language": "cpp",
+            "template": [
+                "gagaga: <<filepath>>",
+                "Project: <<projectpath>>",
+                "Created Date: <<filecreated('dddd, MMMM Do YYYY, h:mm:ss a')>>",
+                "作者: <<author>>",
+                "-----",
+                "Last Modified: ",
+                "Modified By: ",
+                "-----",
+                "Copyright (c) <<year>> <<company>>",
+                "",
+                "<<licensetext>>"
+            ]
+        },
+        {
+            "language": "c",
+            "template": [
+                "gagaga: <<filepath>>",
+                "Project: <<projectpath>>",
+                "Created Date: <<filecreated('dddd, MMMM Do YYYY, h:mm:ss a')>>",
+                "作者: <<author>>",
+                "-----",
+                "Last Modified: ",
+                "Modified By: ",
+                "-----",
+                "Copyright (c) <<year>> <<company>>",
+                "",
+                "<<licensetext>>"
+            ]
+        }
+    ],
+    // function header
+    "doxdocgen.generic.triggerSequence": "/**",
+    "doxdocgen.generic.firstLine": "/**",
+    "doxdocgen.generic.briefTemplate": "摘要 ",
+    "doxdocgen.generic.paramTemplate": "@param {param} ",
+    "doxdocgen.generic.tparamTemplate": "@tparam {param} ",
+    "doxdocgen.generic.returnTemplate": "@return {type} ",
+    // simple tag string
+    "tagged.tagString": "// #year-#month-#day - 标签: #enteredText"
 ```
 
 #### 插件
@@ -158,11 +263,9 @@ cmake - Version :0.0.17
 cmake-tools - Version :0.10.2
 code-settings-sync - Version :2.8.3
 code-spell-checker - Version :1.4.10
-codedox - Version :1.2.5
-comment - Version :5.0.0
 cpplint - Version :0.0.5
 CppSnippets - Version :0.0.12
-cpptools - Version :0.13.1
+cpptools - Version :0.14.0
 divider - Version :1.1.0
 dot - Version :0.0.1
 doxdocgen - Version :0.0.5
@@ -174,7 +277,7 @@ gitblame - Version :2.2.0
 githd - Version :0.10.0
 githistory - Version :0.2.3
 gitignore - Version :0.5.0
-gitlens - Version :5.6.5
+gitlens - Version :5.7.1
 Go - Version :0.6.66
 graphviz-preview - Version :0.0.3
 guides - Version :0.9.0
@@ -192,13 +295,12 @@ output-colorizer - Version :0.1.2
 partial-diff - Version :0.3.3
 path-intellisense - Version :1.4.2
 pdf - Version :0.2.0
-plantuml - Version :2.3.1
+plantuml - Version :2.3.2
 project-manager - Version :0.21.1
 psi-header - Version :1.0.0
 regex - Version :0.1.0
 tagged-comment - Version :0.4.0
 vscode-clang - Version :0.2.2
-vscode-codetags - Version :0.0.2
 vscode-icons - Version :7.15.0
 vscode-languagetool-en - Version :3.8.0
 vscode-languagetool-zh - Version :3.8.0
