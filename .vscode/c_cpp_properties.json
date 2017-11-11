@@ -70,21 +70,25 @@
         },
         {
             "name": "MinGW-64",
-            "includePath": [
+            "includePath": [         
+                "${workspaceRoot}",
                 "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+                "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
                 "D:\\mingw64\\include",
                 "D:\\mingw64\\opt\\include",
-                "D:\\mngw64\\x86_64-w64-mingw32\\include",                
-                "${workspaceRoot}"
+                "D:\\mngw64\\x86_64-w64-mingw32\\include"
             ],
             "defines": [
                 "_DEBUG",
-                "UNICODE"
+                "UNICODE",
+                "__GNUC__=6",
+                "__cdecl=__attribute__((__cdecl__))"
             ],
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [
                     "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+                    "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
                     "D:\\mingw64\\include",
                     "D:\\mingw64\\opt\\include",
                     "D:\\mingw64\\lib",
