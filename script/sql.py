@@ -3,7 +3,7 @@
 import sqlite3
 
 conn = sqlite3.connect('./db/test.db')
-print "Opened database successfully";
+print("Opened database successfully")
 c = conn.cursor()
 c.execute('''CREATE TABLE COMPANY
        (ID INT PRIMARY KEY     NOT NULL,
@@ -11,6 +11,6 @@ c.execute('''CREATE TABLE COMPANY
        AGE            INT     NOT NULL,
        ADDRESS        CHAR(50),
        SALARY         REAL);''')
-print "Table created successfully";
+print("Table created successfully")
 conn.commit()
 conn.close()
