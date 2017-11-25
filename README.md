@@ -1,6 +1,6 @@
 ---
 author: 黎振胜
-Last Modified: 2017-11-19, 8:42 pm
+Last Modified: 2017-11-26, 12:03 am
 filename: README.md
 ---
 
@@ -71,6 +71,7 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
     "editor.minimap.enabled": true,
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
+    "workbench.panel.location": "bottom",
     // "http.proxy": "http://127.0.0.1:1080",
     // "http.proxyStrictSSL": false,
     
@@ -86,7 +87,9 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
     
     // code-spell checker
     "cSpell.userWords": [
-        "plantuml"
+        "jupyter",
+        "plantuml",
+        "sqlite"
     ],
 
     // c-cpp-flylint
@@ -97,11 +100,12 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
     "c-cpp-flylint.flexelint.configFile": "./lnt/std.lnt",
     "c-cpp-flylint.run": "onType",
     "c-cpp-flylint.includePaths": [
+        "${workspaceRoot}/include",
         "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+        "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
         "D:\\mingw64\\include",
         "D:\\mingw64\\opt\\include",
-        "D:\\mngw64\\x86_64-w64-mingw32\\include",
-        "${workspaceRoot}/include"
+        "D:\\mngw64\\x86_64-w64-mingw32\\include"
     ],
 
     // cpplint
@@ -135,7 +139,7 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
 
     // vscode setting sync
     "sync.gist": "6004ed2706ca587a527f9e96d9887491",
-    "sync.lastUpload": "2017-10-20T15:41:43.231Z",
+    "sync.lastUpload": "2017-11-19T12:43:27.369Z",
     "sync.lastDownload": "2017-01-12T13:25:27.249Z",
     "sync.version": 262,
     "sync.autoDownload": false,
@@ -159,15 +163,18 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
     },
     "psi-header.changes-tracking": {
         "isActive": true,
-        "modAuthor": "修改者: ",
-        "modDate": "上次修改: ",
-        "modDateFormat": "日期",
-        "include": [],
-        "exclude": [
-            "markdown",
-            "json"
+        "modAuthor": "Modified By: ",
+        "modDate": "Last Modified:",
+        "modDateFormat": "YYYY-MM-DD, h:mm a",
+        "include": [
+            "markdown"
         ],
-        "autoHeader": "manualSave"
+        "exclude": [
+            "json",
+            "c",
+            "cpp"
+        ],
+        "autoHeader": "autolSave"
     },
     "psi-header.license-text": [
         "All shall be well and all shall be well and all manner of things shall be well.",
@@ -208,6 +215,13 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
         {
             "language": "typescript",
             "mapTo": "javascript"
+        },
+        {
+            "language": "markdown",
+            "begin": "---",
+            "prefix": "",
+            "end": "---",
+            "blankLinesAfter": 1
         }
     ],
     "psi-header.templates": [
@@ -232,7 +246,7 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
             "template": [
                 "gagaga: <<filepath>>",
                 "Project: <<projectpath>>",
-                "Created Date: <<filecreated('dddd, MMMM Do YYYY, h:mm:ss a')>>",
+                "Created Date: <<filecreated('YYYY-MM-DD, h:mm:ss a')>>",
                 "作者: <<author>>",
                 "-----",
                 "Last Modified: ",
@@ -241,6 +255,14 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
                 "Copyright (c) <<year>> <<company>>",
                 "",
                 "<<licensetext>>"
+            ]
+        },
+        {
+            "language": "markdown",
+            "template": [
+                "author: <<author>>",
+                "Last Modified:",
+                "filename: <<filename>>"
             ]
         }
     ],
@@ -252,72 +274,88 @@ e:\Zhensheng\documents\GitHub\zsLearn\lnt\options.lnt
     "doxdocgen.generic.tparamTemplate": "@tparam {param} ",
     "doxdocgen.generic.returnTemplate": "@return {type} ",
     // simple tag string
-    "tagged.tagString": "// #year-#month-#day - 标签: #enteredText"
+    "tagged.tagString": "// #year-#month-#day - 黎振胜: #enteredText",
+    
+    // markdown paste
+    "pasteImage.path": "./image/",
+    "pasteImage.silence": true,
+    "vsicons.dontShowNewVersionMessage": true,
+
+    // astyle
+    "C_Cpp.formatting" : "Disabled",
+    "astyle.executable": "D:\\Program Files (x86)\\AStyle\\bin\\Astyle.exe",
+    "astyle.astylerc": null,
+
+    // xml-tools
+    "xmlTools.xqueryExecutionEngine": "D:\\Program Files (x86)\\Altova\\XMLSpy2012\\XMLSpy.exe",
+    
+    // jupyter
+    "jupyter.appendResults": true
 ```
 
 #### 插件
 
 ```s
-arm - Version :0.1.2
-auto-close-tag - Version :0.5.1
-auto-comment-blocks - Version :1.0.1
-better-comments - Version :0.1.3
-Bookmarks - Version :0.16.0
-c-cpp-flylint - Version :0.5.0
-clang-format - Version :1.6.0
-cmake - Version :0.0.17
-cmake-tools - Version :0.10.2
-code-settings-sync - Version :2.8.3
-code-spell-checker - Version :1.4.10
-cpplint - Version :0.0.5
-CppSnippets - Version :0.0.12
-cpptools - Version :0.14.0
-divider - Version :1.1.0
-dot - Version :0.0.1
-doxdocgen - Version :0.0.5
-Doxygen - Version :1.0.0
-GBKtoUTF8 - Version :0.0.2
-git-easy - Version :1.9.1
-git-project-manager - Version :1.4.0
-gitblame - Version :2.2.0
-githd - Version :0.10.0
-githistory - Version :0.2.3
-gitignore - Version :0.5.0
-gitlens - Version :5.7.1
-Go - Version :0.6.66
-graphviz-preview - Version :0.0.3
-guides - Version :0.9.0
-latex-workshop - Version :3.5.5
-LogFileHighlighter - Version :1.2.0
-markdown-all-in-one - Version :0.11.0
-markdown-checkbox - Version :1.0.3
-markdown-emoji - Version :0.0.6
-markdown-preview-enhanced - Version :0.2.9
-markdown-shortcuts - Version :0.8.1
-markdown-toc - Version :1.5.6
-Material-theme - Version :2.10.17
-mdmath - Version :2.0.7
-output-colorizer - Version :0.1.2
-partial-diff - Version :0.3.3
-path-intellisense - Version :1.4.2
-pdf - Version :0.2.0
-plantuml - Version :2.3.2
-project-manager - Version :0.21.1
-psi-header - Version :1.0.0
-regex - Version :0.1.0
-tagged-comment - Version :0.4.0
-vscode-clang - Version :0.2.2
-vscode-icons - Version :7.15.0
-vscode-languagetool-en - Version :3.8.0
-vscode-languagetool-zh - Version :3.8.0
-vscode-markdown-paste-image - Version :0.7.1
-vscode-markdownlint - Version :0.10.1
-vscode-open - Version :0.1.0
-vscode-open-in-github - Version :1.2.8
-vscode-pandoc - Version :0.0.8
-vscode-todo-highlight - Version :0.5.11
-vscode-wordcount-cjk - Version :1.0.0
-wordcount - Version :0.1.0
-xml - Version :1.9.2
-yog-plantuml-highlight - Version :0.0.5
+auto-close-tag v0.5.3
+  auto-comment-blocks v1.0.1
+  better-comments v0.1.3
+  Bookmarks v0.18.0
+  c-cpp-flylint v0.5.4
+  clang-format v1.6.1
+  code-gnu-global v0.2.2
+  code-settings-sync v2.8.6
+  code-spell-checker v1.4.12
+  cpplint v0.0.5
+  CppSnippets v0.0.13
+  cpptools v0.14.2
+  divider v1.1.0
+  dot v0.0.1
+  doxdocgen v0.0.7
+  Doxygen v1.0.0
+  GBKtoUTF8 v0.0.2
+  git-easy v1.9.1
+  git-project-manager v1.4.0
+  gitblame v2.2.0
+  githd v1.0.0
+  githistory v0.2.3
+  gitignore v0.5.0
+  gitlens v6.1.2
+  Go v0.6.67
+  graphviz-preview v0.0.3
+  guides v0.9.1
+  jupyter v1.1.4
+  LogFileHighlighter v1.2.0
+  markdown-all-in-one v0.11.2
+  markdown-checkbox v1.1.0
+  markdown-emoji v0.0.7
+  markdown-preview-enhanced v0.3.0
+  markdown-shortcuts v0.8.1
+  markdown-toc v1.5.6
+  Material-theme v2.10.23
+  mdmath v2.0.7
+  output-colorizer v0.1.2
+  partial-diff v0.5.0
+  path-intellisense v1.4.2
+  pdf v0.2.0
+  plantuml v2.3.3
+  project-manager v0.23.0
+  psi-header v1.3.4
+  python v0.8.0
+  regex v0.1.0
+  tagged-comment v0.4.0
+  vega-vscode v0.0.2
+  vscode-astyle v0.7.1
+  vscode-clang v0.2.2
+  vscode-codetags v0.0.2
+  vscode-icons v7.18.1
+  vscode-markdown-paste-image v0.7.1
+  vscode-markdownlint v0.12.0
+  vscode-open v0.1.0
+  vscode-pandoc v0.0.8
+  vscode-todo-highlight v0.5.11
+  vscode-wordcount-cjk v1.0.0
+  wordcount v0.1.0
+  xml v1.9.2
+  yang-vscode v1.0.13
+  yog-plantuml-highlight v0.0.5
 ```
