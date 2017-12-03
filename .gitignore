@@ -2,3 +2,5 @@
 build/
 .vscode/.cmaketools.json
 
+.vscode/tags
+.vscode/*.bat
