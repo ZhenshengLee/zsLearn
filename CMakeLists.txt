@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.7.2)
-project(apue)
+project(zsMinGW)
 
 # using cmaktools in vscode
 include(CMakeToolsHelpers OPTIONAL)
@@ -21,12 +21,12 @@ set(CMAKE_CXX_FLAGS "-std=c++11 -Wall")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
 # find packages
-find_package(Log4CXX REQUIRED)
+# find_package(Log4CXX REQUIRED)
 
 # include dirs
 include_directories(
-    /usr/include
-    ${log4cxx_INCLUDE_DIR}
+    # /usr/include
+    # ${log4cxx_INCLUDE_DIR}
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/lib
     )

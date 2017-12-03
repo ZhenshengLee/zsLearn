@@ -1,7 +1,7 @@
 # add executable
 add_executable(hello_world hello_world.cpp)
 target_link_libraries(hello_world
-    apue
+    zs
     ${Log4CXX_LIBRARY}
     )
 
@@ -13,11 +13,11 @@ target_link_libraries(hello_world_test
     gtest
     gtest_main
     pthread
-    apue
+    zs
     )
 
 add_test(
-    NAME apue
+    NAME zs
     COMMAND $<TARGET_FILE:hello_world_test>
     )
 

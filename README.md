@@ -1,22 +1,16 @@
-# 1. zsLearning apue
+# 1. zsLearning MinGW+
 
 ## 1.1. 简介
 
-这是一个通过阅读和练习APUE书本知识来学习Linux系统编程的一个项目。
-
-同时也是自己学习和规范编程技艺的一个实践项目。
-
-在学习APUE之前构建好CMake程序设计框架，包括编辑器VSCode插件环境，调试环境gdb，单元测试环境gtest，日志记录环境log4cxx，文档环境markdown，静态检查工具clang static code analyzer, cppcheck，风格检查工具cpplint，进行相应配置以符合项目需要。
+使用cmake+MinGW+GTest来打造自己的小编译环境，为程序开发和调试中提供便利
 
 ## 1.2. 环境搭建
 
 ### 1.2.1. VSCode
 
-软件安装过程
+略
 
 #### 插件
-
-TODO: 添加自动注释生成插件，评估并选择几款插件
 
 ```shell
 EXTENSIONS ADDED :
@@ -171,42 +165,29 @@ xml - Version :1.9.2
 
 ### 1.2.2. CMake
 
-TODO: 添加判断不同平台，设置不同编译系统的语句。目前两个平台，MinGW和Linux
+~~要用到CMake Server，所以安装3.7.2以上版本，过程略~~
 
-要用到CMake Server，所以安装3.7.2以上版本，过程略
+Windows平台需要安装3.10最新版本
 
 ### 1.2.3. Log4CXX
 
-#### 1.2.3.1. Ubuntu
+这个暂时不安装
 
-由于官方没有支持CMake，自己又能力有限，所以没有添加到项目目录下。
-
-```shell
-sudo apt install liblog4cxx10-dev
-```
 ### 1.2.4. Google Test
 
-考虑到多平台，直接拷贝到目录下
+直接拷贝到目录下，使用cmake编译
 
 ### 1.2.5. Clang Code Static Analyzer
 
-#### 1.2.5.1. Ubuntu
-
-```shell
-sudo apt instal clang
-```
+安装clang软件包即可
 
 #### 1.2.5.2. MinGw
 
-略
+下载复制到D盘
 
 ### 1.2.6. cppcheck
 
-#### 1.2.6.1. Ubuntu
-
-```shell
-sudo apt install cppcheck
-```
+直接安装即可
 
 #### 1.2.6.2. MinGw
 
@@ -214,15 +195,7 @@ sudo apt install cppcheck
 
 ### 1.2.7. cpplint
 
-#### 1.2.7.1. Ubuntu
-
-```shell
-sudo -H pip install cpplint
-```
-
-#### MinGW
-
-考虑到Windows下也要用，所以加入到目录下。
+使用anoconda安装
 
 #### 配置
 
