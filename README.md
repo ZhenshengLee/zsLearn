@@ -175,7 +175,9 @@ Windows平台需要安装3.10最新版本
 
 ### 1.2.4. Google Test
 
-直接拷贝到目录下，使用cmake编译
+直接拷贝到目录下，使用cmake编译，只使用gtest，不适用gmock
+
+修改CMakeLists.txt
 
 ### 1.2.5. Clang Code Static Analyzer
 
