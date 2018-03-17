@@ -5,7 +5,8 @@ project(zsMinGW)
 include(CMakeToolsHelpers OPTIONAL)
 
 # predefine some variables
-
+# options
+option(BUILDWITHTEST "Builds the project with Unit Tests" ON)
 
 # set output path
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
@@ -37,8 +38,11 @@ add_subdirectory("src/helloWorld")
 # add executable
 
 # CTest
-if(NOT without-test)
+if(BUILDWITHTEST)
+    message(STATUS "Build with Unit Tests")
     enable_testing()
     include(CTest)
     add_subdirectory("./gTest-1.8.0")
+else()
+    message(STATUS "Build without Unit Tests")
 endif()

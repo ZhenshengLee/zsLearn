@@ -7,15 +7,18 @@ target_link_libraries(helloWorldMain
 # CTest
 enable_testing()
 
-add_executable(helloWorldTest helloWorldTest.cpp)
-target_link_libraries(helloWorldTest
-    gtest
-    gtest_main
-    helloWorld
-    )
+if(BUILDWITHTEST)
+    add_executable(helloWorldTest helloWorldTest.cpp)
+    target_link_libraries(helloWorldTest
+        gtest
+        gtest_main
+        gmock
+        gmock_main
+        helloWorld
+        )
 
-add_test(
-    NAME helloWorld
-    COMMAND $<TARGET_FILE:helloWorldTest>
-    )
-
+    add_test(
+        NAME helloWorldTest
+        COMMAND $<TARGET_FILE:helloWorldTest>
+        )
+endif()
