@@ -1,0 +1,8 @@
+{
+    "python.unitTest.pyTestArgs": [
+        "script"
+    ],
+    "python.unitTest.pyTestEnabled": false,
+    "python.linting.enabled": true,
+    "python.unitTest.promptToConfigure": false
+}

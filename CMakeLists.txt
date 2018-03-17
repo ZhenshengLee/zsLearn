@@ -28,13 +28,11 @@ include_directories(
     # /usr/include
     # ${log4cxx_INCLUDE_DIR}
     ${PROJECT_SOURCE_DIR}/include
-    ${PROJECT_SOURCE_DIR}/lib
     )
 
 # add subdirectories
-add_subdirectory("./include")
 add_subdirectory("./lib")
-add_subdirectory("src/hello_world")
+add_subdirectory("src/helloWorld")
 
 # add executable
 

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "zs.h"
+#include "helloWorld.h"
 
 using namespace std;
 
@@ -15,9 +15,9 @@ int main()
         cout << "error!" << endl;
         return -1;
     }
-    zs zs_circle(radius);
+    helloWorld helloWorld_circle(radius);
     cout << "Hello, world";
-    cout << "the area of zs_circle is " << zs_circle.getArea() << endl;
+    cout << "the area of helloWorld_circle is " << helloWorld_circle.getArea() << endl;
 
     return 0;
 }

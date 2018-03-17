@@ -1,29 +1,29 @@
-#include "zs.h"
+#include "helloWorld.h"
 
-zs::zs():
+helloWorld::helloWorld():
     radius(1),
     area(0.0)
 {
     diameter=2*radius;
 }
 
-zs::zs(int input):
+helloWorld::helloWorld(int input):
     radius(input),
     diameter(2*input),
     area(0.0)
 {
 }
 
-zs::~zs()
+helloWorld::~helloWorld()
 {
 }
 
-void zs::calArea()
+void helloWorld::calArea()
 {
     area=3.14*3.14*radius;
 }
 
-double zs::getArea()
+double helloWorld::getArea()
 {
     calArea();
     return area;

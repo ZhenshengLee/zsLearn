@@ -1,1 +1,1 @@
-add_library(zs SHARED zs.cpp)
+add_library(helloWorld SHARED helloWorld.cpp)

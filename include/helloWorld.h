@@ -1,11 +1,11 @@
 #pragma once
 
-class zs
+class helloWorld
 {
 public:
-    zs();
-    zs(int input);
-    ~zs();
+    helloWorld();
+    helloWorld(int input);
+    ~helloWorld();
     double getArea();
     
 
