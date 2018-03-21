@@ -7,6 +7,7 @@ include(CMakeToolsHelpers OPTIONAL)
 # predefine some variables
 # options
 option(BUILDWITHTEST "Builds the project with Unit Tests" ON)
+option(BUILDWITHLOG "Builds the project with Log System" ON)
 
 # set output path
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
@@ -36,6 +37,14 @@ add_subdirectory("./lib")
 add_subdirectory("src/helloWorld")
 
 # add executable
+
+# CTest
+if(BUILDWITHLOG)
+    message(STATUS "Build with Log System")
+    add_subdirectory("./log4cplus-1.2.1")
+else()
+    message(STATUS "Build without Log System")
+endif()
 
 # CTest
 if(BUILDWITHTEST)
