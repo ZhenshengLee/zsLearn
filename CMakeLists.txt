@@ -15,8 +15,9 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
 # set cpp standard
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wall")
-# set(CMAKE_CXX_FLAGS_DEBUG "")
-# set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -o0 -g -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O2")
 # set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2")
 
 # set before finding packages
