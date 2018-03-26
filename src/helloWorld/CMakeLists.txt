@@ -11,7 +11,7 @@ set(CLASS_LIB "${CURRENT_FOLDER}")
 add_executable(${MAIN_EXE} ${MAIN_SRC})
 target_link_libraries(${MAIN_EXE}
     ${CLASS_LIB}
-    log4cplusU
+    log4cplusSU
     )
 
 # CTest
