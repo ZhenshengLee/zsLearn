@@ -72,30 +72,30 @@
             "name": "MinGW-64",
             "includePath": [         
                 "${workspaceRoot}",
-                "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
-                "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
-                "D:\\mingw64\\include",
-                "D:\\mingw64\\opt\\include",
-                "D:\\mngw64\\x86_64-w64-mingw32\\include"
+                "D:\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+                "D:\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
+                "D:\\LLVM\\include",
+                "D:\\LLVM\\opt\\include",
+                "D:\\LLVM\\x86_64-w64-mingw32\\include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "__GNUC__=6",
+                "__GNUC__=7",
                 "__cdecl=__attribute__((__cdecl__))"
             ],
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [
-                    "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
-                    "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
-                    "D:\\mingw64\\include",
-                    "D:\\mingw64\\opt\\include",
-                    "D:\\mingw64\\lib",
-                    "D:\\mingw64\\libexec",
-                    "D:\\mingw64\\opt\\lib",
-                    "D:\\mingw64\\opt\\share",
-                    "D:\\mingw64\\x86_64-w64-mingw32\\lib",
+                    "D:\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+                    "D:\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
+                    "D:\\LLVM\\include",
+                    "D:\\LLVM\\opt\\include",
+                    "D:\\LLVM\\lib",
+                    "D:\\LLVM\\libexec",
+                    "D:\\LLVM\\opt\\lib",
+                    "D:\\LLVM\\opt\\share",
+                    "D:\\LLVM\\x86_64-w64-mingw32\\lib",
                     "${workspaceRoot}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
