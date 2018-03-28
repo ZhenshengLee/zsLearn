@@ -72,11 +72,11 @@
             "name": "MinGW-64",
             "includePath": [         
                 "${workspaceRoot}",
-                "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
-                "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
-                "D:\\mingw64\\include",
-                "D:\\mingw64\\opt\\include",
-                "D:\\mngw64\\x86_64-w64-mingw32\\include"
+                "D:\\Program Files\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+                "D:\\Program Files\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
+                "D:\\Program Files\\LLVM\\include",
+                "D:\\Program Files\\LLVM\\opt\\include",
+                "D:\\Program Files\\LLVM\\x86_64-w64-mingw32\\include"
             ],
             "defines": [
                 "_DEBUG",
@@ -87,15 +87,15 @@
             "intelliSenseMode": "clang-x64",
             "browse": {
                 "path": [
-                    "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
-                    "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
-                    "D:\\mingw64\\include",
-                    "D:\\mingw64\\opt\\include",
-                    "D:\\mingw64\\lib",
-                    "D:\\mingw64\\libexec",
-                    "D:\\mingw64\\opt\\lib",
-                    "D:\\mingw64\\opt\\share",
-                    "D:\\mingw64\\x86_64-w64-mingw32\\lib",
+                    "D:\\Program Files\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include",
+                    "D:\\Program Files\\LLVM\\lib\\gcc\\x86_64-w64-mingw32\\7.1.0\\include-fixed",
+                    "D:\\Program Files\\LLVM\\include",
+                    "D:\\Program Files\\LLVM\\opt\\include",
+                    "D:\\Program Files\\LLVM\\lib",
+                    "D:\\Program Files\\LLVM\\libexec",
+                    "D:\\Program Files\\LLVM\\opt\\lib",
+                    "D:\\Program Files\\LLVM\\opt\\share",
+                    "D:\\Program Files\\LLVM\\x86_64-w64-mingw32\\lib",
                     "${workspaceRoot}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,

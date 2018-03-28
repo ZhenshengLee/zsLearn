@@ -1,6 +1,6 @@
 {
-	"version": "0.2.0",
-	"configurations": [
+    "version": "0.2.0",
+    "configurations": [
         {
             "name": "Python",
             "type": "python",
@@ -17,34 +17,35 @@
                 "RedirectOutput"
             ]
         },
-		{
-			"name": "C++ Launch",
-			"type": "cppdbg",
-			"request": "launch",
-			"targetArchitecture": "x64",
-			"program": "${workspaceRoot}/bin/hello_world.exe",
-			"args": [],
-			"stopAtEntry": false,
-			"cwd": "${workspaceRoot}",
-			"environment": [],
-			"externalConsole": true,
-			"linux": {
-				"MIMode": "gdb"
-			},
-			"osx": {
-				"MIMode": "lldb"
-			},
-			"windows": {
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "targetArchitecture": "x64",
+            "program": "${workspaceRoot}/bin/hello_world",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
                 "MIMode": "gdb",
-                "miDebuggerPath": "D:\\mingw64\\bin\\gdb.exe",
-                "setupCommands": [{
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
+                "miDebuggerPath": "D:\\Program Files\\LLVM\\bin\\gdb.exe",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
                     }
                 ],
                 "preLaunchTask": "MinGW-Make"
-			}
-		}
-	]
+            }
+        }
+    ]
 }

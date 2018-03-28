@@ -1,4 +1,7 @@
-PROJECT := zs_pat_basic
+PROJECT := zsMinGW
+
+# define compiler
+CXX = clang++
 
 # define c++ version
 CXX_VERSION := -std=c++11
@@ -14,14 +17,13 @@ LINK_DIR :=
 
 
 # define debug options
-DEBUG_OPTIONS := -g
+DEBUG_OPTIONS := -g -Wall -static-libgcc --target=x86_64-w64-mingw
 
 # define build targets
 .PHONY : all
 all: $(BUILD_DIR)/hello_world \
 
-		 
-		 
+
 $(BUILD_DIR)/% : $(SRC_DIR)/%.cpp
 	$(CXX) $(CXX_VERSION) -o $@ $(DEBUG_OPTIONS) -I$(INCLUDE_DIR) -L$(LINK_DIR) -l$(LIB_FILES) $<
 
