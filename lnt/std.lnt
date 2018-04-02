@@ -1,0 +1,20 @@
+//  Microsoft Visual C++ 2010 -si4 -sl4 -sp8, lib-stl.lnt
+//  Standard lint options
+
+D:\lint\au-sm123.lnt
+D:\lint\co-msc100.lnt
+D:\lint\lib-stl.lnt
+D:\lint\options.lnt
+-si4 -sl4 -sp8
+-i"D:\lint"
+-i"E:\Zhensheng\documents\GitHub\zsLearn\include"
+-i"E:\Zhensheng\documents\GitHub\zsLearn\log4cplus-1.2.1\include"
+-i"E:\Zhensheng\documents\GitHub\zsLearn\gTest-1.8.0\googletest\include"
+-i"E:\Zhensheng\documents\GitHub\zsLearn\gTest-1.8.0\googlemock\include"
+-i"D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include"
+-i"D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\cliext"
+-i"D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\CodeAnalysis"
+-i"D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\Manifest"
+-i"D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\msclr"
+-i"D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\sys"
+
