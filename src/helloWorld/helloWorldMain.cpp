@@ -1,15 +1,14 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 #include <string>
 
 #include "helloWorld.h"
-#include "log4cplus/loggingmacros.h"
-#include "log4cplus/logger.h"
 #include "log4cplus/consoleappender.h"
-#include "log4cplus/layout.h"
-#include "log4cplus/loglevel.h"
 #include "log4cplus/helpers/sleep.h"
-
+#include "log4cplus/layout.h"
+#include "log4cplus/logger.h"
+#include "log4cplus/loggingmacros.h"
+#include "log4cplus/loglevel.h"
 
 using namespace std;
 using namespace log4cplus;
@@ -18,7 +17,7 @@ using namespace log4cplus::helpers;
 int main()
 {
     // 初始化日志系统
-    log4cplus::initialize ();
+    log4cplus::initialize();
     /* step 1: Instantiate an appender object */
     SharedAppenderPtr _append(new ConsoleAppender(false, true));
     _append->setName(LOG4CPLUS_TEXT("First"));
@@ -26,14 +25,13 @@ int main()
     /* step 2: Instantiate a layout object */
     // 应该用内部类型tstring
     // std::string pattern = "%d{%m/%d/%y %H:%M:%S}  - %m [%l]%n";
-    // log4cplus::tstring pattern = LOG4CPLUS_TEXT("%d{%m/%d/%y %H:%M:%S,%Q} [%t] %-5p %c{2} %%%x%% - %X{key} - %m [%l]%n");
-    // std::auto_ptr<Layout> _layout(new PatternLayout(pattern));
+    // log4cplus::tstring pattern = LOG4CPLUS_TEXT("%d{%m/%d/%y %H:%M:%S,%Q} [%t] %-5p %c{2} %%%x%% - %X{key} - %m
+    // [%l]%n"); std::auto_ptr<Layout> _layout(new PatternLayout(pattern));
 
     /* step 3: Attach the layout object to the appender */
     // _append->setLayout( _layout );
     Layout *_layout;
-    _append->setLayout(
-        std::auto_ptr<Layout>(_layout = new log4cplus::SimpleLayout));
+    _append->setLayout(std::auto_ptr<Layout>(_layout = new log4cplus::SimpleLayout));
 
     // /* step 4: Instantiate a logger object */
     Logger _logger = Logger::getRoot();
@@ -55,10 +53,7 @@ int main()
     radius = 3;
     if (0 > radius)
     {
-        LOG4CPLUS_FATAL(_logger,
-                    "This is a fatal double: the radius is invalid"
-                    << setprecision(15)
-                    << radius);
+        LOG4CPLUS_FATAL(_logger, "This is a fatal double: the radius is invalid" << setprecision(15) << radius);
         return -1;
     }
     helloWorld helloWorld_circle(radius);
