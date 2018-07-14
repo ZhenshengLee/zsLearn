@@ -80,5 +80,16 @@
         "xtree": "cpp",
         "xutility": "cpp"
     },
-    "python.pythonPath": "C:\\Users\\zhens\\Anaconda2\\python.exe"
+    "python.pythonPath": "C:\\Users\\zhens\\Anaconda2\\python.exe",
+    "favorites.sortDirection": "ASC",
+    "favorites.groupsFirst": true,
+    "favorites.root": [
+        {
+            "type": "File",
+            "name": "e:\\Zhensheng\\documents\\GitHub\\zsLearn\\README.md",
+            "parent_id": null,
+            "id": "d3HcpxV2ASj7PD1b",
+            "workspacePath": "README.md"
+        }
+    ]
 }
