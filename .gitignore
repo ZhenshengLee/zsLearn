@@ -4,3 +4,4 @@ build/
 bin/
 log4cplus-1.2.1/
 .vscode/.cmaketools.json
+.vscode/*.bat
