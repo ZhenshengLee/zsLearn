@@ -20,7 +20,7 @@
 			},
 			"windows": {
                 "MIMode": "gdb",
-                "miDebuggerPath": "D:\\LLVM\\bin\\gdb.exe",
+                "miDebuggerPath": "D:\\usr\\LLVM\\bin\\gdb.exe",
                 "setupCommands": [{
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
